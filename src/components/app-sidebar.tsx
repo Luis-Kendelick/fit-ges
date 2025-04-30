@@ -4,16 +4,12 @@ import * as React from "react"
 import {
   AudioWaveform,
   BadgeDollarSignIcon,
-  BookOpen,
-  Calendar1Icon,
   CalendarDaysIcon,
   CogIcon,
   Command,
   Frame,
-  GalleryVerticalEnd,
   Map,
   PieChart,
-  Settings2,
   SquareChevronRightIcon,
   UsersIcon,
 } from "lucide-react"
@@ -25,7 +21,6 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarRail,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
 import { NavMain } from "./nav-main"

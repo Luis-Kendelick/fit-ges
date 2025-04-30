@@ -1,8 +1,4 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Sheet, SheetClose, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Button } from '@/components/ui/button';
-import { Menu, X, Users, CreditCard, CalendarDays } from 'lucide-react';
+import React from 'react';
 import { AppSidebar } from './app-sidebar';
 import { SidebarInset, SidebarProvider, SidebarTrigger } from './ui/sidebar';
 import { Separator } from './ui/separator';

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { VariantProps, cva } from "class-variance-authority"
-import { MenuIcon, PanelLeftIcon, XIcon } from "lucide-react"
+import { MenuIcon, XIcon } from "lucide-react"
 import { useIsMobile } from "@/hooks/use-mobile"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip"
 import { cn } from "@/lib/utils"
