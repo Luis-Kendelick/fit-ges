@@ -1,0 +1,87 @@
+<context>
+# Overview  
+Esse projeto será um app web, que posteriormente virará um app mobile.
+Ele será usado por personal trainers para fazer o controle da parte do trabalho deles que é a gestão de alunos. Pra isso, precisamos ter as seguintes funcionalidades:
+- gestão de alunos cadastrados (listagem de alunos, visualização de informações pessoais, visualização de planos contratados, alteração de planos contratados e alteração de dados pessoais);
+- gestão de calendário semanal e mensal com horários de aulas marcadas com alunos. Esse calendário será uma forma fácil do personal ver quais alunos ele tem o compromisso de encotrar naquele dia e em qual horário;
+- fazer o manuseio dos horários marcados dos alunos a partir do calendário;
+- fazer a gestão de pagamento dos alunos, sem conectar com nenhum serviço de pagamento por enquanto. Nesse primeiro momento, só usaremos uma funcionalidade de subir notas e mostrar em notificação quem não enviou nota fiscal de pagamento ainda;
+- acompanhar ganhos mensais e prever o ganho mensal de meses próximos a partir de planos contratados pelos alunos.
+
+Esse app será valoroso para o personal trainer porque é muito difícil ficar anotando em planilhas todo mês qual aluno pagou e ficar verificando isso. É difícil também para o personal saber quais aulas ele dará no
+dia somente a partir de conversas no whatsapp, se ele pudesse ver um calendário, já seria ótimo. Alguns alunos cancelam aulas, com no máximo 24h de antecedência e o personal tem que ficar gerindo o próprio tempo, se tivesse esse app pra fazer as marcações no calendário, ele poderia ver muito mais fácil.
+
+# Core Features  
+- What it does
+-- Gestão de alunos:
+   - adiciona novo aluno;
+   - apaga aluno da base de dados;
+   - altera informações pessoais do aluno;
+   - registra o plano de pagamento e a recorrência que o aluno contratou;
+   - registra quais horários o aluno quer fazer aula;
+
+-- Calendário de aulas:
+   - mostra um calendário que mostrará em qual hora há uma aula a ser dada e uma badge a qual aluno se refere aquela aula;
+   - pode fazer o drag and drop das badges da aula para outro horário, trocando de horário aquela aula específica, sem mexer no horário base semanal daquele aluno.
+
+-- Gestão de pagamento:
+   - gostaria que o personal pudesse subir notas de pagamento dos alunos pra poder mostrar que foi pago o valor do mês;
+   - gostaria que o personal tivesse visualização de quanto ao todo ele receberá nos próximos meses a partir dos planos recorrentes e planos anuais a semestrais dos alunos.
+   - gostaria que o personal recebesse notificação de quais alunos passaram do tempo de pagar a mensalidade;
+   - gostaria que o personal tivesse visualização de quais alunos estão inedimplentes.
+
+-- Visualização do aluno:
+   - inicialmente verá o calendário de suas aulas e poderá requisitar uma troca de horário de sua aula no máximo 24 horas antes do horário da aula.
+   - o aluno só poderá trocar o horário de alguma aula até no máximo um número de vezes específico no mês.
+ 
+
+# User Experience  
+Há dois tipos de eprsonas no app:
+- O personal trainer
+- O aluno
+
+O personal trainer fará o login e entrará na plataforma para gerenciar os alunos cadastrados por ele. Ele tem uma série de funcionalidades que ele pode acessar pelo menu lateral no desktop e mobile. Pode acessar a funcionalidade de cadastro de alunos, listagem de alunos e manuseio das informações dos alunos; pode acessar a funcionalidade de ver seu calendário com aulas agendadas com todos os alunos pra poder se planejar e também fazer o manuseio dos horários dos alunos. ELe pode acessar a funcionalidade de ver como está o pagamento dos planos dos alunos a partir de notas que ele recebe por outro serviço externo e faz o upload no nosso app. 
+
+O aluno pode entrar na plataforma pra poder ver quando são as aulas com seu personal trainer, sugerir novos horários que devem ser aprovados pelo personal e ver se há horários disponíveis pra ele poder trocar o dia e horário de aula.
+
+Personas:
+ - Personal trainer que fará a gestão da própria conta e de seus alunos;
+ - Aluno que verá seu relacionamento com o personal trainer, seu plano contratado e o calendário para troca de aulas.
+
+</context>
+<PRD>
+# Technical Architecture  
+[Outline the technical implementation details:
+- System components
+Esse projeto haverá um backend e frontend para o personal trainer e um frontend para o aluno. Também contará com lógica de notificações e mensageria básica. 
+Está sendo feito com React 18, TailwindCSS, ShadCN, React Router para as rotas. E sempre deve seguir esse padrão. 
+O backend deve ser feito com Node e Nest.
+Já a mensageria e notificação seria bom incluir socket.io.
+- Data models
+- APIs and integrations
+- Infrastructure requirements
+ - os requisitos de infra são usar a Vercel para entregar os fronts, github para todos os repositórios, backend será publicado no Railway inicialmente, banco de dados pode ser usado o Supabase.
+]
+
+# Development Roadmap  
+ - Preciso criar o frontend de gestão da visão do personal trainer primeiro. 
+   - Primeiro preciso criar a gestão de alunos:
+     - poder adicionar novos alunos, poder remover alunos, poder alterar suas informações pessoais e em quais horários da semana ele quer fazer aula de personal trainer.
+     - depois preciso conseguir adicionar planos específicos aos alunos, existe a diferenciação de plano pela recorrência (mensal, trimestral, semestral) e também existe a diferenciação de número de aulas por semana (quantas aulas por semana o aluno irá fazer).
+     - preciso conseguir trocar o plano do aluno.
+     - quando eu adicionar um plano a um aluno, deve ser enviado por e-mail um pedido de aprovação de plano pra ele. E aí sim será atrelado na plataforma aquele plano ao perfil do aluno.
+   - Depois podemos atacar a gestão do calendário:
+     - no calendário deve conter todas as aulas semanais que existem de todos os alunos do personal trainer. Lá ele pode arrastar as aulas para outros horários ou clicar pra cancelamento. 
+     - Nas próximas versões do aplicativo, quero incluir um sistema de envio de mensagem através do whatsapp do aluno pra mostrar que a aula está confirmada ou pra mostrar que uma aula foi cancelada.
+     - Nas próximas versões do aplicativo, quero incluir um fluxo onde o aluno possa entrar na plataforma, ver os horários de aula agendados com o personal e poder sugerir novo horário ou fazer pedido de troca de horário do agendamento de aula dele.
+
+# Logical Dependency Chain
+- Task 1: Criar a estrutura do front. Deve ter a possibilidade de adicionar novas rotas de forma componentizada.
+- Task 2: Após criar as rotas, devemos criar um menu tanto em mobile quanto em desktop que seja preparado para navegar para outras rotas. 
+- Task 3: Após criar o menu, ele deve ser adicionado num Layout que engloba todo o app pra ser mostrado em todas as rotas possíveis. 
+- Task 4: Após criar o layout, devemos fazer a estilização que engloba as páginas que serão mostradas no layout principal em cada rota. 
+- Task 5: Depois disso, devemos criar uma página de login que será utilizada por todos os tipos de usuários. 
+- Task 6: Precisamos criar o serviço de login usando os requisitos de backend. 
+- Task 7: precisamos criar uma autenticação baseada em JWT para o login.
+- Após essas tasks, novas tasks serão definidas posteriormente.
+</PRD>
