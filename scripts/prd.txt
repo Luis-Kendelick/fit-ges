@@ -47,21 +47,24 @@ O aluno pode entrar na plataforma pra poder ver quando são as aulas com seu per
 Personas:
  - Personal trainer que fará a gestão da própria conta e de seus alunos;
  - Aluno que verá seu relacionamento com o personal trainer, seu plano contratado e o calendário para troca de aulas.
-
 </context>
 <PRD>
 # Technical Architecture  
-[Outline the technical implementation details:
 - System components
 Esse projeto haverá um backend e frontend para o personal trainer e um frontend para o aluno. Também contará com lógica de notificações e mensageria básica. 
-Está sendo feito com React 18, TailwindCSS, ShadCN, React Router para as rotas. E sempre deve seguir esse padrão. 
+Está sendo feito com React 18 + Typescript gerado pelo vite, TailwindCSS, ShadCN, React Router para as rotas. E sempre deve seguir esse padrão. 
 O backend deve ser feito com Node e Nest.
 Já a mensageria e notificação seria bom incluir socket.io.
+
 - Data models
-- APIs and integrations
+Os principais modelos de dados incluem:
+  - Usuário (Personal Trainer e Aluno)
+  - Planos (tipos, recorrências, valores)
+  - Aulas (horários, aluno, status)
+  - Pagamentos (status, comprovantes)
+
 - Infrastructure requirements
- - os requisitos de infra são usar a Vercel para entregar os fronts, github para todos os repositórios, backend será publicado no Railway inicialmente, banco de dados pode ser usado o Supabase.
-]
+ - Os requisitos de infra são usar a Vercel para entregar os fronts, github para todos os repositórios, backend será publicado no Railway inicialmente, banco de dados pode ser usado o Supabase.
 
 # Development Roadmap  
  - Preciso criar o frontend de gestão da visão do personal trainer primeiro. 
@@ -83,5 +86,9 @@ Já a mensageria e notificação seria bom incluir socket.io.
 - Task 5: Depois disso, devemos criar uma página de login que será utilizada por todos os tipos de usuários. 
 - Task 6: Precisamos criar o serviço de login usando os requisitos de backend. 
 - Task 7: precisamos criar uma autenticação baseada em JWT para o login.
-- Após essas tasks, novas tasks serão definidas posteriormente.
+- Task 8: Criar interface de gerenciamento de alunos com cadastro, edição e exclusão.
+- Task 9: Implementar funcionalidade de planos e atribuição de planos aos alunos.
+- Task 10: Desenvolver o calendário interativo para visualização e gerenciamento de aulas.
+- Task 11: Implementar sistema de notificações para pagamentos pendentes.
+- Task 12: Criar dashboard de análise financeira para o personal trainer.
 </PRD>

@@ -1,0 +1,21 @@
+// "mcpserver": {
+    //   "command": "cmd",
+    //   "args": [
+    //     "/k",
+    //     "wsl.exe -e node /var/www/html/SERVER/build/index.js --log-level=debug > C:\\temp\\mcp.log 2>&1"
+    //   ],
+    //   "env": {
+    //     "DEBUG": "*",
+    //     "NODE_DEBUG": "net,stream,module,http",
+    //     "MCP_LOG_LEVEL": "debug"
+    //   }
+    // }
+
+    comando funcinoal do mcp"command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "--package=task-master-ai",
+        "task-master-ai"
+      ],

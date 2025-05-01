@@ -1,0 +1,31 @@
+Aplicativo de Gerenciamento para Personal Trainers (FitGes)
+
+# Visão Geral
+Um aplicativo web (e futuramente mobile) para personal trainers gerenciarem seus alunos, aulas, e pagamentos.
+
+# Principais Funcionalidades
+- Gestão de alunos (cadastro, edição, remoção)
+- Calendário de aulas com visualização semanal/mensal
+- Gerenciamento de planos e pagamentos
+- Sistema de notificações
+- Dashboard de métricas financeiras
+
+# Tecnologias
+- Frontend: React 18 + TypeScript, TailwindCSS, ShadCN, React Router
+- Backend: Node.js e Nest.js
+- Mensageria: Socket.io
+- Infraestrutura: Vercel (front), Railway (back), Supabase (banco de dados)
+
+# Roadmap de Desenvolvimento
+1. Criar estrutura base do frontend com rotas
+2. Implementar menu de navegação responsivo
+3. Criar layout principal que engloba todas as páginas
+4. Estilizar componentes principais
+5. Desenvolver página de login
+6. Implementar serviço de autenticação
+7. Criar sistema de autenticação JWT
+8. Implementar gestão de alunos (CRUD)
+9. Desenvolver funcionalidade de planos e atribuição
+10. Criar calendário interativo
+11. Implementar sistema de notificações
+12. Desenvolver dashboard financeiro 

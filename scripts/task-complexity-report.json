@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "generatedAt": "2025-04-30T20:47:40.566Z",
+    "tasksAnalyzed": 10,
+    "thresholdScore": 5,
+    "projectName": "Your Project Name",
+    "usedResearch": false
+  },
+  "complexityAnalysis": [
+    {
+      "taskId": 1,
+      "taskTitle": "Criar estrutura base do frontend com React e configuração de rotas",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the React project setup task into specific subtasks covering: 1) Initial Vite project creation, 2) TailwindCSS and ShadCN installation and configuration, 3) React Router setup, 4) Folder structure creation, and 5) Dynamic routing system implementation. For each subtask, include specific commands, configuration files to modify, and acceptance criteria.",
+      "reasoning": "This task involves multiple technical setup steps including project initialization, multiple library installations, and creating an organized folder structure with a dynamic routing system. While each individual step is well-documented, the combination and proper configuration requires careful attention."
+    },
+    {
+      "taskId": 2,
+      "taskTitle": "Desenvolver menu de navegação responsivo",
+      "complexityScore": 5,
+      "recommendedSubtasks": 4,
+      "expansionPrompt": "Divide the responsive navigation menu task into subtasks covering: 1) Basic menu component structure with ShadCN components, 2) Mobile hamburger menu with expand/collapse functionality, 3) Navigation links with appropriate icons and active state highlighting, and 4) Responsive design implementation using TailwindCSS. Include specific component requirements and responsive breakpoints for each subtask.",
+      "reasoning": "Creating a responsive navigation menu requires implementing both desktop and mobile views, state management for the active item, and ensuring proper responsiveness. The task is moderately complex but well-defined with clear requirements and dependencies on established UI libraries."
+    },
+    {
+      "taskId": 3,
+      "taskTitle": "Implementar layout principal com menu integrado",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the main layout implementation task into subtasks covering: 1) Creating the MainLayout component structure, 2) Integrating the navigation menu component, 3) Implementing responsive layout for different screen sizes, 4) Creating a layout context for global state management, and 5) Integrating the layout with the routing system. For each subtask, specify the component structure, state management approach, and integration points.",
+      "reasoning": "This task requires creating a layout system that works across all pages, implementing context for global state management, and ensuring responsive behavior. It builds upon the previous menu component but adds complexity with the context implementation and routing integration."
+    },
+    {
+      "taskId": 4,
+      "taskTitle": "Estilizar páginas principais e componentes comuns",
+      "complexityScore": 7,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Divide the styling task into subtasks covering: 1) Creating a custom TailwindCSS theme configuration, 2) Developing base UI components (Card, Button, Input), 3) Implementing form components and validation styles, 4) Creating data display components (Table, Lists), 5) Developing feedback components (alerts, loaders), and 6) Implementing page templates for main sections. For each subtask, include design system guidelines and component API specifications.",
+      "reasoning": "This task involves creating a comprehensive design system with multiple reusable components and page templates. It requires deep knowledge of both TailwindCSS and ShadCN, along with considerations for responsive design, accessibility, and consistent styling across the application."
+    },
+    {
+      "taskId": 5,
+      "taskTitle": "Desenvolver página de login e autenticação frontend",
+      "complexityScore": 6,
+      "recommendedSubtasks": 5,
+      "expansionPrompt": "Break down the login page development task into subtasks covering: 1) Creating the login form UI with validation, 2) Implementing user type selection (Personal/Student), 3) Adding 'Remember me' and 'Forgot password' functionality, 4) Creating frontend authentication service for API communication, and 5) Implementing token storage and post-login redirection. For each subtask, specify validation rules, state management approach, and security considerations.",
+      "reasoning": "The login page requires form validation, state management, user type switching, and integration with authentication services. It also involves security considerations for token storage and handling authentication states, making it moderately complex."
+    },
+    {
+      "taskId": 6,
+      "taskTitle": "Implementar serviço de autenticação backend com NestJS",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Divide the NestJS authentication service implementation into subtasks covering: 1) Setting up NestJS project with TypeScript, 2) Creating user and profile data models with Supabase integration, 3) Implementing user registration endpoints with validation, 4) Creating login endpoint with JWT token generation, 5) Implementing authentication middleware for protected routes, and 6) Setting up CORS and security configurations. For each subtask, include data models, endpoint specifications, and security requirements.",
+      "reasoning": "This task involves setting up a complete backend authentication system with NestJS, including database integration, JWT implementation, middleware for route protection, and proper security configurations. It requires knowledge of multiple technologies and security best practices."
+    },
+    {
+      "taskId": 7,
+      "taskTitle": "Implementar autenticação JWT e proteção de rotas",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the JWT authentication implementation task into subtasks covering: 1) Configuring JWT strategy in NestJS backend, 2) Implementing route guards and middleware for token validation, 3) Creating refresh token mechanism, 4) Developing frontend interceptor for JWT header inclusion, 5) Implementing AuthContext for global authentication state, and 6) Creating protected route components in React Router. For each subtask, include security considerations, token handling specifications, and integration points between frontend and backend.",
+      "reasoning": "This task requires implementing JWT authentication across both frontend and backend, including complex features like refresh tokens, route protection, and session management. It involves security considerations and coordination between multiple system components."
+    },
+    {
+      "taskId": 8,
+      "taskTitle": "Desenvolver interface de gerenciamento de alunos",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Divide the student management interface task into subtasks covering: 1) Creating paginated student listing with filters and search, 2) Implementing student registration form with validation, 3) Developing student details page with tabbed sections, 4) Creating schedule management interface, 5) Implementing student data editing functionality, 6) Adding student deletion with confirmation, and 7) Developing backend CRUD endpoints for student management. For each subtask, specify UI components, data models, validation rules, and API integration points.",
+      "reasoning": "This task involves creating a complete CRUD interface with multiple views (list, details, edit), complex forms, tabbed interfaces, and integration with backend services. It requires implementing search, pagination, and filtering, along with proper data validation and confirmation flows."
+    },
+    {
+      "taskId": 9,
+      "taskTitle": "Implementar sistema de planos e atribuição aos alunos",
+      "complexityScore": 8,
+      "recommendedSubtasks": 6,
+      "expansionPrompt": "Break down the plan management system task into subtasks covering: 1) Creating plan type management interface, 2) Implementing plan configuration for class frequency, 3) Developing student plan assignment interface, 4) Creating email notification service for plan approval, 5) Implementing pricing calculation logic based on recurrence, and 6) Developing backend endpoints and data models for plans. For each subtask, specify UI components, business logic rules, data models, and integration requirements.",
+      "reasoning": "This task requires implementing a complex business logic system for plan management, including pricing calculations, email notifications, and history tracking. It involves both frontend interfaces and backend services with multiple interconnected components."
+    },
+    {
+      "taskId": 10,
+      "taskTitle": "Desenvolver calendário interativo para gerenciamento de aulas",
+      "complexityScore": 9,
+      "recommendedSubtasks": 7,
+      "expansionPrompt": "Divide the interactive calendar development task into subtasks covering: 1) Implementing basic calendar component with FullCalendar, 2) Adding drag-and-drop functionality for class rescheduling, 3) Creating class details modal and cancellation flow, 4) Implementing visual distinctions for different class types, 5) Developing recurrent event generation based on fixed schedules, 6) Creating backend endpoints for class management, and 7) Implementing validation to prevent scheduling conflicts. For each subtask, specify UI components, interaction patterns, data models, and validation rules.",
+      "reasoning": "This task involves implementing a complex interactive calendar with drag-and-drop functionality, modal interactions, and recurrent event generation. It requires integration with a third-party library, creating backend services for event management, and implementing business logic for scheduling validation."
+    }
+  ]
+}
